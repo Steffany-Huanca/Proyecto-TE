@@ -1,21 +1,24 @@
-:root {
-    /* Tu paleta de colores */
-    --color-red: #E63946;
-    --color-light: #F1FAEE;
-    --color-light-blue: #A8DADC;
-    --color-blue: #457B9D;
-    --color-dark-blue: #1D3557;
-    /* Tipografías */
-    --font-title: 'Cinzel', serif;
-    --font-body: 'Lora', serif;
+@import "tailwindcss";
+
+/* Aquí le enseñamos a Tailwind nuestros colores y fuentes */
+
+@theme {
+    --color-aura-red: #E63946;
+    --color-aura-light: #F1FAEE;
+    --color-aura-lightblue: #A8DADC;
+    --color-aura-blue: #457B9D;
+    --color-aura-dark: #1D3557;
+    --font-title: "Cinzel", serif;
+    --font-body: "Lora", serif;
 }
 
+
+/* Estilos base en CSS clásico para no complicar el @apply */
+
 body {
-    margin: 0;
+    background-color: var(--color-aura-light);
+    color: var(--color-aura-dark);
     font-family: var(--font-body);
-    background-color: var(--color-light);
-    /* Fondo claro de la paleta */
-    color: var(--color-dark-blue);
 }
 
 h1,
@@ -25,5 +28,4 @@ h4,
 h5,
 h6 {
     font-family: var(--font-title);
-    font-weight: 400;
 }
