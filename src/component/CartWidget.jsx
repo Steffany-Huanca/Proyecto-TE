@@ -2,22 +2,13 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 export default function CartWidget() {
-  // Aquí consumimos el estado global usando useContext
   const { cart } = useContext(CartContext);
-  
-  // Por ahora, el número será la cantidad de elementos en el arreglo 'cart'
   const totalItems = cart.length;
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-      <span style={{ fontSize: '1.5rem', marginRight: '5px' }}>🛒</span>
-      <span style={{ 
-        background: '#0f172a', // Un azul muy oscuro
-        color: 'white', 
-        borderRadius: '50%', 
-        padding: '2px 8px',
-        fontWeight: 'bold'
-      }}>
+    <div className="flex items-center cursor-pointer">
+      <span className="text-2xl mr-2">🛒</span>
+      <span className="bg-aura-red text-aura-light rounded-full px-2 py-0.5 font-bold font-body text-sm">
         {totalItems}
       </span>
     </div>

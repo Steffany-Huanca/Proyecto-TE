@@ -1,15 +1,39 @@
 import { createContext, useState } from 'react';
 
-// 1. Creamos el contexto
 export const CartContext = createContext();
 
-// 2. Creamos el Provider (el componente que envolverá a nuestra app para proveerle los datos)
 export const CartProvider = ({ children }) => {
-  // Estado principal: un arreglo vacío que guardará los productos que el usuario elija
   const [cart, setCart] = useState([]);
 
+  const agregarAlCarrito = (producto) => {
+    setCart((carritoActual) => {
+      const productoExistente = carritoActual.find(item => item.id === producto.id);
+      
+      if (productoExistente) {
+        return carritoActual.map(item => 
+          item.id === producto.id 
+            ? { ...item, cantidad: item.cantidad + 1 } 
+            : item
+        );
+      } else {
+        return [...carritoActual, { ...producto, cantidad: 1 }];
+      }
+    });
+  };
+
+  // Función 2: Eliminar un producto por completo
+  const eliminarDelCarrito = (id) => {
+    setCart((carritoActual) => carritoActual.filter(item => item.id !== id));
+  };
+
+  // Función 3: Calcular el total a pagar
+  const calcularTotal = () => {
+    return cart.reduce((total, item) => total + (item.price * item.cantidad), 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
+    // Pasamos el estado (cart) y las funciones a toda la aplicación
+    <CartContext.Provider value={{ cart, agregarAlCarrito, eliminarDelCarrito, calcularTotal }}>
       {children}
     </CartContext.Provider>
   );
