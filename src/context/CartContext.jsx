@@ -28,7 +28,8 @@ export const CartProvider = ({ children }) => {
 
   // Función 3: Calcular el total a pagar
   const calcularTotal = () => {
-    return cart.reduce((total, item) => total + (item.price * item.cantidad), 0);
+    // CAMBIO AQUÍ: item.precio en lugar de item.price
+    return cart.reduce((total, item) => total + (item.precio * item.cantidad), 0);
   };
 
   return (
