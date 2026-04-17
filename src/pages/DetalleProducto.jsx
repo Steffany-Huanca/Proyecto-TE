@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { useContext, useState } from 'react'; // 1. Agregamos hooks de React
-import { CartContext } from '../context/CartContext'; // 2. Importamos tu Context
+import { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
 import productos from '../data/products.json';
 
 export default function DetalleProducto() {
@@ -64,7 +64,6 @@ export default function DetalleProducto() {
           </div>
         </div>
 
-        {/* COLUMNA DERECHA: Info del Producto */}
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           
           <p className="font-quattrocento text-aura-cerulean text-sm font-bold tracking-widest uppercase mb-3">
@@ -102,7 +101,6 @@ export default function DetalleProducto() {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             
-            {/* 6. Conectamos los botones de + y - al estado local */}
             <div className="flex items-center justify-between border border-gray-300 rounded-lg px-4 py-3 sm:w-1/3 bg-white shadow-sm">
               <button 
                 onClick={() => setCantidadLocal(Math.max(1, cantidadLocal - 1))}
@@ -121,7 +119,6 @@ export default function DetalleProducto() {
               </button>
             </div>
 
-            {/* 7. Conectamos el botón gigante a tu función */}
             <button 
               onClick={handleAgregarClick}
               className="sm:w-2/3 bg-aura-red hover:bg-[#c92e3a] text-white font-quattrocento font-bold text-lg py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"

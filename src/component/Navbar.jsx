@@ -1,13 +1,12 @@
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom'; 
 
 export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-8 py-4 bg-aura-dark text-aura-light shadow-md">
-      <h2 className="m-0 tracking-widest text-xl">
+      <Link to="/" className="m-0 tracking-widest text-xl font-cinzel hover:text-aura-blue transition-colors">
         Aura Urban Style
-      </h2>
-      
-      {/* Aquí luego irán los enlaces de navegación de Franz */}
+      </Link>
       
       <CartWidget />
     </nav>

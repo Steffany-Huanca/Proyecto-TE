@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 export default function Carrito() {
-  // Traemos los datos y funciones desde tu "cerebro" global
   const { cart, eliminarDelCarrito, calcularTotal } = useContext(CartContext);
 
-  // Si el carrito está vacío, mostramos este mensaje amigable
   if (cart.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-20 px-4">
@@ -19,33 +17,28 @@ export default function Carrito() {
     );
   }
 
-  // Si hay productos, mostramos la tabla y el resumen
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="font-cinzel text-4xl font-bold text-aura-dark mb-8">Tu Carrito de Compras</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Columna Izquierda: Lista de Productos */}
           <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <ul className="divide-y divide-gray-200">
               {cart.map((producto) => (
                 <li key={producto.id} className="p-6 flex flex-col sm:flex-row items-center gap-6">
-                  {/* Imagen del producto */}
                   <img 
                     src={producto.imagen} 
                     alt={producto.nombre} 
                     className="w-24 h-24 object-cover rounded-md border border-gray-200"
                   />
                   
-                  {/* Detalles del producto */}
                   <div className="flex-1 text-center sm:text-left">
                     <h3 className="font-cinzel text-lg font-bold text-aura-dark">{producto.nombre}</h3>
                     <p className="font-quattrocento text-sm text-gray-500 uppercase tracking-wider mb-2">{producto.categoria}</p>
                     <p className="font-quattrocento text-aura-cerulean font-bold">Precio unitario: S/ {producto.precio.toFixed(2)}</p>
                   </div>
 
-                  {/* Cantidad y Subtotal */}
                   <div className="text-center sm:text-right">
                     <p className="font-quattrocento text-sm text-gray-600 mb-1">Cantidad: <span className="font-bold">{producto.cantidad}</span></p>
                     <p className="font-cinzel font-bold text-xl text-aura-dark mb-3">
@@ -63,7 +56,6 @@ export default function Carrito() {
             </ul>
           </div>
 
-          {/* Columna Derecha: Resumen de Compra */}
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-fit">
             <h2 className="font-cinzel text-2xl font-bold text-aura-dark mb-6 border-b pb-4">Resumen de la orden</h2>
             

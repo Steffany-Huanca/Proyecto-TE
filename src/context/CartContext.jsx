@@ -21,19 +21,15 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // Función 2: Eliminar un producto por completo
   const eliminarDelCarrito = (id) => {
     setCart((carritoActual) => carritoActual.filter(item => item.id !== id));
   };
 
-  // Función 3: Calcular el total a pagar
   const calcularTotal = () => {
-    // CAMBIO AQUÍ: item.precio en lugar de item.price
     return cart.reduce((total, item) => total + (item.precio * item.cantidad), 0);
   };
 
   return (
-    // Pasamos el estado (cart) y las funciones a toda la aplicación
     <CartContext.Provider value={{ cart, agregarAlCarrito, eliminarDelCarrito, calcularTotal }}>
       {children}
     </CartContext.Provider>

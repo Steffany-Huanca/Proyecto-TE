@@ -1,12 +1,10 @@
 @import "tailwindcss";
 @theme {
-    /* Tus colores Aura */
     --color-aura-red: #E63946;
     --color-aura-light: #F1FAEE;
     --color-aura-blue: #A8DADC;
     --color-aura-cerulean: #457B9D;
     --color-aura-dark: #1D3557;
-    /* Tus nuevas tipografías */
     --font-cinzel: "Cinzel", serif;
     --font-quattrocento: "Quattrocento", serif;
     --font-lora: "Lora", serif;
@@ -14,7 +12,6 @@
 
 @layer base {
     body {
-        /* Usamos Lora como la fuente por defecto para toda la página */
         @apply bg-white text-gray-900 font-lora;
     }
 }
