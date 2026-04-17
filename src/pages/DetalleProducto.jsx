@@ -1,9 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
+import { useContext, useState } from 'react'; // 1. Agregamos hooks de React
+import { CartContext } from '../context/CartContext'; // 2. Importamos tu Context
 import productos from '../data/products.json';
 
 export default function DetalleProducto() {
-    
   const { id } = useParams();
+  
+  const { agregarAlCarrito } = useContext(CartContext);
+  
+  const [cantidadLocal, setCantidadLocal] = useState(1);
 
   const producto = productos.find(p => p.id === parseInt(id));
 
@@ -18,6 +23,15 @@ export default function DetalleProducto() {
     );
   }
 
+  const handleAgregarClick = () => {
+    for (let i = 0; i < cantidadLocal; i++) {
+      agregarAlCarrito(producto);
+    }
+    alert(`¡Se agregaron ${cantidadLocal} producto(s) a tu carrito!`);
+    
+    setCantidadLocal(1);
+  };
+
   return (
     <div className="container mx-auto px-4 py-12 min-h-screen">
       
@@ -28,7 +42,6 @@ export default function DetalleProducto() {
       </div>
 
       <div className="flex flex-col md:flex-row gap-12 lg:gap-20">
-        
         <div className="w-full md:w-1/2">
           <div className="bg-gray-50 aspect-square rounded-2xl flex items-center justify-center border border-gray-200 shadow-sm overflow-hidden">
              <img 
@@ -42,7 +55,6 @@ export default function DetalleProducto() {
              <div className="bg-gray-50 w-24 h-24 rounded-xl cursor-pointer border-2 border-aura-cerulean shadow-sm overflow-hidden">
                 <img src={producto.imagen} alt="miniatura 1" className="w-full h-full object-cover" />
              </div>
-
              <div className="bg-gray-100 w-24 h-24 rounded-xl cursor-not-allowed border border-gray-200 flex items-center justify-center opacity-50">
                  <span className="text-xs text-gray-400">Vista 2</span>
              </div>
@@ -52,6 +64,7 @@ export default function DetalleProducto() {
           </div>
         </div>
 
+        {/* COLUMNA DERECHA: Info del Producto */}
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           
           <p className="font-quattrocento text-aura-cerulean text-sm font-bold tracking-widest uppercase mb-3">
@@ -88,14 +101,31 @@ export default function DetalleProducto() {
           <hr className="border-gray-200 mb-8" />
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-           
+            
+            {/* 6. Conectamos los botones de + y - al estado local */}
             <div className="flex items-center justify-between border border-gray-300 rounded-lg px-4 py-3 sm:w-1/3 bg-white shadow-sm">
-              <button className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors">−</button>
-              <span className="font-quattrocento font-bold text-lg text-aura-dark">1</span>
-              <button className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors">+</button>
+              <button 
+                onClick={() => setCantidadLocal(Math.max(1, cantidadLocal - 1))}
+                className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors"
+              >
+                −
+              </button>
+              <span className="font-quattrocento font-bold text-lg text-aura-dark">
+                {cantidadLocal}
+              </span>
+              <button 
+                onClick={() => setCantidadLocal(cantidadLocal + 1)}
+                className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors"
+              >
+                +
+              </button>
             </div>
 
-            <button className="sm:w-2/3 bg-aura-red hover:bg-[#c92e3a] text-white font-quattrocento font-bold text-lg py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            {/* 7. Conectamos el botón gigante a tu función */}
+            <button 
+              onClick={handleAgregarClick}
+              className="sm:w-2/3 bg-aura-red hover:bg-[#c92e3a] text-white font-quattrocento font-bold text-lg py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
               Agregar al Carrito
             </button>
           </div>
