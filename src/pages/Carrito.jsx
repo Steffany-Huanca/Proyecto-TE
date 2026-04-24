@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 export default function Carrito() {
-  const { cart, eliminarDelCarrito, calcularTotal } = useContext(CartContext);
+  const { cart, eliminarDelCarrito, calcularTotal, actualizarCantidad } = useContext(CartContext);
 
-  // 1. Reglas de Negocio para el Envío
   const subtotal = calcularTotal();
   const UMBRAL_ENVIO_GRATIS = 150;
   const COSTO_ENVIO_FIJO = 15;
   
-  // 2. Cálculos Condicionales
   const costoEnvio = subtotal >= UMBRAL_ENVIO_GRATIS ? 0 : COSTO_ENVIO_FIJO;
   const totalAPagar = subtotal + costoEnvio;
   const porcentajeProgreso = Math.min((subtotal / UMBRAL_ENVIO_GRATIS) * 100, 100);
@@ -49,9 +47,31 @@ export default function Carrito() {
                     <p className="font-quattrocento text-aura-cerulean font-bold">Precio unitario: S/ {producto.precio.toFixed(2)}</p>
                   </div>
 
-                  <div className="text-center sm:text-right">
-                    <p className="font-quattrocento text-sm text-gray-600 mb-1">Cantidad: <span className="font-bold">{producto.cantidad}</span></p>
-                    <p className="font-cinzel font-bold text-xl text-aura-dark mb-3">
+                  <div className="text-center sm:text-right flex flex-col items-center sm:items-end">
+                    
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="font-quattrocento text-sm text-gray-600 hidden sm:inline">Cant:</span>
+                      <div className="flex items-center border border-gray-300 rounded-md bg-white">
+                        <button 
+                          onClick={() => actualizarCantidad(producto.id, producto.cantidad - 1)}
+                          disabled={producto.cantidad === 1}
+                          className={`px-3 py-1 font-bold transition-colors ${producto.cantidad === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:text-aura-dark'}`}
+                        >
+                          −
+                        </button>
+                        <span className="font-quattrocento font-bold px-2 text-aura-dark w-6 text-center">
+                          {producto.cantidad}
+                        </span>
+                        <button 
+                          onClick={() => actualizarCantidad(producto.id, producto.cantidad + 1)}
+                          className="px-3 py-1 text-gray-500 hover:text-aura-dark font-bold transition-colors"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <p className="font-cinzel font-bold text-xl text-aura-dark mb-2 mt-1">
                       Subtotal: S/ {(producto.precio * producto.cantidad).toFixed(2)}
                     </p>
                     <button 
@@ -83,16 +103,14 @@ export default function Carrito() {
               )}
             </div>
 
-            {/* Mensaje de Envío Gratis Dinámico */}
             <div className="mb-6 bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm text-center">
                 {subtotal >= UMBRAL_ENVIO_GRATIS ? (
-                    <p className="text-green-600 font-bold font-lora">¡Felicidades! Tienes envío gratis.</p>
+                    <p className="text-green-600 font-bold font-quattrocento">¡Felicidades! Tienes envío gratis.</p>
                 ) : (
                     <>
-                        <p className="text-gray-600 font-lora mb-2">
+                        <p className="text-gray-600 font-quattrocento mb-2">
                             Te faltan <span className="font-bold text-aura-dark">S/ {(UMBRAL_ENVIO_GRATIS - subtotal).toFixed(2)}</span> para envío gratis.
                         </p>
-                        {/* Barra de progreso */}
                         <div className="w-full bg-gray-200 rounded-full h-2">
                             <div className="bg-aura-blue h-2 rounded-full transition-all duration-500" style={{ width: `${porcentajeProgreso}%` }}></div>
                         </div>

@@ -29,8 +29,21 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((total, item) => total + (item.precio * item.cantidad), 0);
   };
 
+  const actualizarCantidad = (id, nuevaCantidad) => {
+    // Evitamos que baje a cero o números negativos
+    if (nuevaCantidad < 1) return; 
+    
+    setCart((carritoActual) => 
+      carritoActual.map(item => 
+        item.id === id 
+          ? { ...item, cantidad: nuevaCantidad } 
+          : item
+      )
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, agregarAlCarrito, eliminarDelCarrito, calcularTotal }}>
+    <CartContext.Provider value={{ cart, agregarAlCarrito, eliminarDelCarrito, calcularTotal, actualizarCantidad }}>
       {children}
     </CartContext.Provider>
   );
