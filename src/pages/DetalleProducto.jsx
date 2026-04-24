@@ -2,13 +2,13 @@ import { useParams, Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import productos from '../data/products.json';
+import toast from 'react-hot-toast';
 
 export default function DetalleProducto() {
   const { id } = useParams();
   
   const { agregarAlCarrito } = useContext(CartContext);
   
-  // Estado para controlar cuántos productos quiere llevar el usuario
   const [cantidadLocal, setCantidadLocal] = useState(1);
 
   const producto = productos.find(p => p.id === parseInt(id));
@@ -24,14 +24,12 @@ export default function DetalleProducto() {
     );
   }
 
-  // Función para agregar al carrito considerando la cantidad seleccionada
   const handleAgregarClick = () => {
     for (let i = 0; i < cantidadLocal; i++) {
       agregarAlCarrito(producto);
     }
-    alert(`¡Se agregaron ${cantidadLocal}x ${producto.nombre} a tu carrito!`);
+    toast.success(`Agregaste ${cantidadLocal} ${producto.nombre} al carrito`);
     
-    // Reseteamos el contador a 1 después de agregar
     setCantidadLocal(1);
   };
 
