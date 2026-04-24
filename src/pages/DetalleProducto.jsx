@@ -28,7 +28,10 @@ export default function DetalleProducto() {
     for (let i = 0; i < cantidadLocal; i++) {
       agregarAlCarrito(producto);
     }
-    toast.success(`Agregaste ${cantidadLocal} ${producto.nombre} al carrito`);
+    
+    const textoUnidades = cantidadLocal === 1 ? 'unidad' : 'unidades';
+    
+    toast.success(`Agregaste ${cantidadLocal} ${textoUnidades} de ${producto.nombre} al carrito`);
     
     setCantidadLocal(1);
   };
