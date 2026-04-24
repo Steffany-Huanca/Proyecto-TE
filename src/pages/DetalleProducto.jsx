@@ -8,6 +8,7 @@ export default function DetalleProducto() {
   
   const { agregarAlCarrito } = useContext(CartContext);
   
+  // Estado para controlar cuántos productos quiere llevar el usuario
   const [cantidadLocal, setCantidadLocal] = useState(1);
 
   const producto = productos.find(p => p.id === parseInt(id));
@@ -23,12 +24,14 @@ export default function DetalleProducto() {
     );
   }
 
+  // Función para agregar al carrito considerando la cantidad seleccionada
   const handleAgregarClick = () => {
     for (let i = 0; i < cantidadLocal; i++) {
       agregarAlCarrito(producto);
     }
-    alert(`¡Se agregaron ${cantidadLocal} producto(s) a tu carrito!`);
+    alert(`¡Se agregaron ${cantidadLocal}x ${producto.nombre} a tu carrito!`);
     
+    // Reseteamos el contador a 1 después de agregar
     setCantidadLocal(1);
   };
 
@@ -106,7 +109,7 @@ export default function DetalleProducto() {
                 onClick={() => setCantidadLocal(Math.max(1, cantidadLocal - 1))}
                 className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors"
               >
-                −
+                -  {/* ¡AQUÍ ESTABA EL DETALLE, FALTABA EL SIGNO MENOS! */}
               </button>
               <span className="font-quattrocento font-bold text-lg text-aura-dark">
                 {cantidadLocal}
