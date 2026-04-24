@@ -4,87 +4,668 @@
     "nombre": "Mochila City Commuter",
     "precio": 120.00,
     "categoria": "Mochilas",
-    "descripcion": "Diseñada para el profesional moderno. Cuenta con compartimentos acolchados para laptop de hasta 15 pulgadas y material resistente al agua. Un diseño ergonómico que se adapta a tu estilo de vida en la ciudad.",
-    "imagen": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600",
+    "descripcion": "Nuestra mochila insignia diseñada para el ritmo de la ciudad. Su estructura ergonómica distribuye el peso de manera uniforme, protegiendo tu espalda en viajes largos. El compartimento principal cuenta con apertura de 180 grados para un fácil acceso a tu equipo.",
+    "material": "Nylon Balístico 1680D resistente al agua",
+    "dimensiones": "45cm x 30cm x 15cm (Capacidad 20L)",
+    "caracteristicas_clave": [
+      "Bolsillo acolchado para laptop de 16\"",
+      "Panel trasero de malla transpirable 3D",
+      "Bolsillo oculto anti-robo en la espalda",
+      "Puerto de paso para cable USB"
+    ],
     "destacado": true,
-    "colores": ["Negro", "Azul Marino"],
-    "stock": 15
+    "stock": 15,
+    "variantes": [
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#1a1a1a",
+        "imagenes": [
+          "/img/mochila-negra-1.jpg",
+          "/img/mochila-negra-2.jpg",
+          "/img/mochila-negra-3.jpg"
+        ]
+      },
+      {
+        "color_nombre": "Caqui",
+        "color_hex": "#a3927a",
+        "imagenes": [
+          "/img/mochila-caqui-1.jpg",
+          "/img/mochila-caqui-2.jpg",
+          "/img/mochila-caqui-3.jpg"
+        ]
+      }
+    ]
   },
   {
     "id": 2,
     "nombre": "Bolso Messenger Aura",
     "precio": 85.50,
     "categoria": "Bolsos",
-    "descripcion": "El equilibrio perfecto entre lo casual y lo formal. Ideal para llevar tu tablet, cuadernos y accesorios de uso diario con total seguridad y estilo.",
-    "imagen": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=600",
+    "descripcion": "El equilibrio perfecto entre la informalidad de la calle y la elegancia de la oficina. Este messenger bag tiene capacidad para documentos A4 y cuenta con un pad de espuma viscoelástica para máxima comodidad cruzada.",
+    "material": "Cuero vegano de alta resistencia y forro de algodón",
+    "dimensiones": "38cm x 28cm x 10cm",
+    "caracteristicas_clave": [
+      "Correa ajustable con hombrera de memory foam",
+      "Cierre principal con solapa y broches magnéticos",
+      "Organizador interno para lapiceros y llaves"
+    ],
     "destacado": true,
-    "colores": ["Negro", "Café"],
-    "stock": 8
+    "stock": 8,
+    "variantes": [
+      {
+        "color_nombre": "Cuero Café",
+        "color_hex": "#8B5A2B",
+        "imagenes": [
+          "https://placehold.co/600x600/8B5A2B/FFF/png?text=Messenger+Cafe+Frente",
+          "https://placehold.co/600x600/8B5A2B/FFF/png?text=Messenger+Cafe+Abierto",
+          "https://placehold.co/600x600/8B5A2B/FFF/png?text=Messenger+Cafe+Detalle"
+        ]
+      },
+      {
+        "color_nombre": "Negro Mate",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Messenger+Negro+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Messenger+Negro+Abierto",
+          "https://placehold.co/600x600/111111/FFF/png?text=Messenger+Negro+Detalle"
+        ]
+      }
+    ]
   },
   {
     "id": 3,
     "nombre": "Canguro Urban Tech",
     "precio": 45.00,
     "categoria": "Accesorios",
-    "descripcion": "Lleva tus esenciales de forma segura. Material repelente al agua, correa ajustable multiposición y cremalleras de alta resistencia.",
-    "imagen": "https://images.unsplash.com/photo-1590845947698-8924d7409b56?auto=format&fit=crop&q=80&w=600",
+    "descripcion": "La riñonera reimaginada para el siglo XXI. Lleva tus esenciales pegados al cuerpo con total seguridad. Úsala a la cintura o cruzada al pecho gracias a su correa ajustable con hebilla de liberación rápida.",
+    "material": "Poliéster 900D Ripstop",
+    "dimensiones": "25cm x 15cm x 6cm",
+    "caracteristicas_clave": [
+      "Cremalleras YKK impermeables termo-selladas",
+      "Bolsillo frontal forrado en felpa",
+      "Clip interno para llaves de acceso rápido"
+    ],
     "destacado": false,
-    "colores": ["Negro", "Gris", "Verde Olivo"],
-    "stock": 25
+    "stock": 25,
+    "variantes": [
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Canguro+Negro+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Canguro+Negro+Atras",
+          "https://placehold.co/600x600/111111/FFF/png?text=Canguro+Negro+Correa"
+        ]
+      },
+      {
+        "color_nombre": "Verde Olivo",
+        "color_hex": "#556B2F",
+        "imagenes": [
+          "https://placehold.co/600x600/556B2F/FFF/png?text=Canguro+Verde+Frente",
+          "https://placehold.co/600x600/556B2F/FFF/png?text=Canguro+Verde+Atras",
+          "https://placehold.co/600x600/556B2F/FFF/png?text=Canguro+Verde+Correa"
+        ]
+      }
+    ]
   },
   {
     "id": 4,
-    "nombre": "Tote Bag Minimalista",
-    "precio": 60.00,
-    "categoria": "Bolsos",
-    "descripcion": "Espacioso, resistente y con un diseño súper limpio. Tu compañero ideal para compras, el gimnasio o el día a día en la ciudad.",
-    "imagen": "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=600",
-    "destacado": true,
-    "colores": ["Beige", "Negro"],
-    "stock": 12
+    "nombre": "Billetera Slim Block",
+    "precio": 35.00,
+    "categoria": "Accesorios",
+    "descripcion": "Olvídate de las billeteras abultadas. Nuestro diseño slim cabe perfectamente en tu bolsillo delantero, previniendo dolores de espalda. Mantiene tus tarjetas seguras contra clonaciones inalámbricas.",
+    "material": "Aluminio aeroespacial y Cuero Genuino",
+    "dimensiones": "10cm x 6.5cm x 1.5cm",
+    "caracteristicas_clave": [
+      "Tecnología de bloqueo RFID integrada",
+      "Mecanismo pop-up para expulsar tarjetas en abanico",
+      "Capacidad para 6 tarjetas de crédito lisas"
+    ],
+    "destacado": false,
+    "stock": 30,
+    "variantes": [
+      {
+        "color_nombre": "Café Oscuro",
+        "color_hex": "#3b2511",
+        "imagenes": [
+          "https://placehold.co/600x600/3b2511/FFF/png?text=Billetera+Cafe+Frente",
+          "https://placehold.co/600x600/3b2511/FFF/png?text=Billetera+Cafe+Abierta",
+          "https://placehold.co/600x600/3b2511/FFF/png?text=Billetera+Cafe+Tarjetas"
+        ]
+      },
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Billetera+Negra+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Billetera+Negra+Abierta",
+          "https://placehold.co/600x600/111111/FFF/png?text=Billetera+Negra+Tarjetas"
+        ]
+      }
+    ]
   },
   {
     "id": 5,
-    "nombre": "Billetera Slim de Cuero",
-    "precio": 35.00,
-    "categoria": "Accesorios",
-    "descripcion": "Perfil ultra delgado con protección RFID. Espacio para 6 tarjetas y billetes sin abultar tus bolsillos.",
-    "imagen": "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=600",
-    "destacado": false,
-    "colores": ["Café Oscuro", "Negro"],
-    "stock": 30
+    "nombre": "Tote Bag Lona Minimalista",
+    "precio": 60.00,
+    "categoria": "Bolsos",
+    "descripcion": "Un clásico que nunca falla, construido para durar. Fabricado en lona de algodón pesada, soporta el peso de tus compras, libros o equipo sin perder su forma estructurada.",
+    "material": "Lona de algodón de 16 onzas",
+    "dimensiones": "40cm x 35cm x 12cm",
+    "caracteristicas_clave": [
+      "Asas reforzadas con doble costura cruzada",
+      "Bolsillo interno con cremallera para objetos de valor",
+      "Base rígida extraíble"
+    ],
+    "destacado": true,
+    "stock": 45,
+    "variantes": [
+      {
+        "color_nombre": "Crudo / Beige",
+        "color_hex": "#E8DCC4",
+        "imagenes": [
+          "https://placehold.co/600x600/E8DCC4/000/png?text=Tote+Beige+Frente",
+          "https://placehold.co/600x600/E8DCC4/000/png?text=Tote+Beige+Modelo",
+          "https://placehold.co/600x600/E8DCC4/000/png?text=Tote+Beige+Interior"
+        ]
+      },
+      {
+        "color_nombre": "Verde Bosque",
+        "color_hex": "#2E4A35",
+        "imagenes": [
+          "https://placehold.co/600x600/2E4A35/FFF/png?text=Tote+Verde+Frente",
+          "https://placehold.co/600x600/2E4A35/FFF/png?text=Tote+Verde+Modelo",
+          "https://placehold.co/600x600/2E4A35/FFF/png?text=Tote+Verde+Interior"
+        ]
+      }
+    ]
   },
   {
     "id": 6,
-    "nombre": "Mochila Weekend Explorer",
-    "precio": 150.00,
+    "nombre": "Mochila Roll-Top Explorer",
+    "precio": 145.00,
     "categoria": "Mochilas",
-    "descripcion": "Máxima capacidad para tus viajes cortos o escapadas de fin de semana. Múltiples bolsillos externos e internos y soporte lumbar.",
-    "imagen": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=600",
+    "descripcion": "Para los que necesitan flexibilidad de espacio. El diseño roll-top permite expandir la capacidad de 20L a 30L en segundos. Ideal para ciclistas urbanos o escapadas de fin de semana.",
+    "material": "Lona encerada repelente al agua",
+    "dimensiones": "45cm-60cm x 32cm x 16cm (Expandible)",
+    "caracteristicas_clave": [
+      "Cierre superior enrollable con clip magnético",
+      "Acceso lateral rápido con cremallera",
+      "Fondo reforzado en cuero sintético"
+    ],
     "destacado": false,
-    "colores": ["Verde Olivo", "Azul Marino"],
-    "stock": 5
+    "stock": 12,
+    "variantes": [
+      {
+        "color_nombre": "Mostaza",
+        "color_hex": "#D4AF37",
+        "imagenes": [
+          "https://placehold.co/600x600/D4AF37/000/png?text=RollTop+Mostaza+Cerrada",
+          "https://placehold.co/600x600/D4AF37/000/png?text=RollTop+Mostaza+Abierta",
+          "https://placehold.co/600x600/D4AF37/000/png?text=RollTop+Mostaza+Espalda"
+        ]
+      },
+      {
+        "color_nombre": "Negro Carbón",
+        "color_hex": "#222222",
+        "imagenes": [
+          "https://placehold.co/600x600/222222/FFF/png?text=RollTop+Negro+Cerrada",
+          "https://placehold.co/600x600/222222/FFF/png?text=RollTop+Negro+Abierta",
+          "https://placehold.co/600x600/222222/FFF/png?text=RollTop+Negro+Espalda"
+        ]
+      }
+    ]
   },
   {
     "id": 7,
-    "nombre": "Maletín Ejecutivo Canvas",
+    "nombre": "Maletín Ejecutivo Classic",
     "precio": 110.00,
     "categoria": "Bolsos",
-    "descripcion": "Construcción robusta en lona de alta densidad con detalles en cuero vegano. El complemento perfecto para la oficina.",
-    "imagen": "https://images.unsplash.com/photo-1554342872-034a06541bad?auto=format&fit=crop&q=80&w=600",
+    "descripcion": "Una reinterpretación moderna del maletín tradicional, combinando lona técnica con acentos en cuero premium. Estructura semi-rígida que se mantiene de pie por sí sola.",
+    "material": "Canvas de alta densidad y acentos en poliuretano",
+    "dimensiones": "41cm x 30cm x 9cm",
+    "caracteristicas_clave": [
+      "Compartimento dual para laptop y documentos",
+      "Correa de hombro desmontable",
+      "Banda trasera para anclar a maletas de cabina"
+    ],
     "destacado": false,
-    "colores": ["Gris Jaspeado", "Negro"],
-    "stock": 10
+    "stock": 5,
+    "variantes": [
+      {
+        "color_nombre": "Gris Jaspeado",
+        "color_hex": "#A9A9A9",
+        "imagenes": [
+          "https://placehold.co/600x600/A9A9A9/000/png?text=Maletin+Gris+Frente",
+          "https://placehold.co/600x600/A9A9A9/000/png?text=Maletin+Gris+Abierto",
+          "https://placehold.co/600x600/A9A9A9/000/png?text=Maletin+Gris+Asa"
+        ]
+      }
+    ]
   },
   {
     "id": 8,
-    "nombre": "Gorra Classic Aura",
-    "precio": 25.00,
+    "nombre": "Gorra Classic Aura 6-Paneles",
+    "precio": 28.00,
     "categoria": "Accesorios",
-    "descripcion": "Gorra de algodón estructurada con el logo sutil de Aura bordado. Ajuste universal y gran transpirabilidad.",
-    "imagen": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=600",
+    "descripcion": "Nuestra silueta de 6 paneles ofrece un ajuste perfecto y atemporal. Construida con gabardina de algodón cepillado de tacto ultra suave.",
+    "material": "100% Algodón Premium",
+    "dimensiones": "Talla Única (Ajustable)",
+    "caracteristicas_clave": [
+      "Logo sutil bordado en relieve",
+      "Hebilla metálica trasera para micro-ajustes",
+      "Ojales bordados para máxima ventilación"
+    ],
     "destacado": true,
-    "colores": ["Negro", "Blanco"],
-    "stock": 40
+    "stock": 55,
+    "variantes": [
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Gorra+Negra+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Gorra+Negra+Lado",
+          "https://placehold.co/600x600/111111/FFF/png?text=Gorra+Negra+Atras"
+        ]
+      },
+      {
+        "color_nombre": "Blanco Roto",
+        "color_hex": "#F5F5F0",
+        "imagenes": [
+          "https://placehold.co/600x600/F5F5F0/000/png?text=Gorra+Blanca+Frente",
+          "https://placehold.co/600x600/F5F5F0/000/png?text=Gorra+Blanca+Lado",
+          "https://placehold.co/600x600/F5F5F0/000/png?text=Gorra+Blanca+Atras"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Bolso Cruzado Sling Tech",
+    "precio": 55.00,
+    "categoria": "Bolsos",
+    "descripcion": "El Sling Tech se lleva cruzado en la espalda o el pecho. Su diseño aerodinámico abraza tu cuerpo. Incluye un puerto USB externo para que conectes tu powerbank y cargues tu celular en movimiento.",
+    "material": "Oxford Cloth repelente al agua",
+    "dimensiones": "32cm x 18cm x 10cm",
+    "caracteristicas_clave": [
+      "Puerto de carga USB externo",
+      "Bolsillo anti-robo en el panel trasero",
+      "Hebilla de liberación rápida en la correa"
+    ],
+    "destacado": false,
+    "stock": 20,
+    "variantes": [
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Sling+Negro+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Sling+Negro+Puesto",
+          "https://placehold.co/600x600/111111/FFF/png?text=Sling+Negro+Detalle+USB"
+        ]
+      },
+      {
+        "color_nombre": "Gris Urbano",
+        "color_hex": "#708090",
+        "imagenes": [
+          "https://placehold.co/600x600/708090/FFF/png?text=Sling+Gris+Frente",
+          "https://placehold.co/600x600/708090/FFF/png?text=Sling+Gris+Puesto",
+          "https://placehold.co/600x600/708090/FFF/png?text=Sling+Gris+Detalle+USB"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Mochila Fotográfica Pro Gear",
+    "precio": 185.00,
+    "categoria": "Mochilas",
+    "descripcion": "El santuario para tu equipo audiovisual. Diseñada junto a creadores de contenido, incluye divisores internos con velcro para personalizar el espacio para tu cámara DSLR, lentes y drones.",
+    "material": "Nylon 1000D con recubrimiento de poliuretano",
+    "dimensiones": "48cm x 33cm x 20cm",
+    "caracteristicas_clave": [
+      "Divisores internos modulares de EVA",
+      "Acceso lateral rápido a la cámara principal",
+      "Correas externas para trípode",
+      "Funda impermeable para lluvia incluida"
+    ],
+    "destacado": true,
+    "stock": 6,
+    "variantes": [
+      {
+        "color_nombre": "Gris Carbón",
+        "color_hex": "#36454F",
+        "imagenes": [
+          "https://placehold.co/600x600/36454F/FFF/png?text=FotoPro+Gris+Cerrada",
+          "https://placehold.co/600x600/36454F/FFF/png?text=FotoPro+Gris+Abierta",
+          "https://placehold.co/600x600/36454F/FFF/png?text=FotoPro+Gris+Tripode"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Funda Laptop Sleek 15\"",
+    "precio": 40.00,
+    "categoria": "Accesorios",
+    "descripcion": "Protección minimalista a prueba de golpes. El exterior repele el agua al instante, mientras que el interior de microfibra ultra suave pule tu laptop mientras la transportas.",
+    "material": "Poliuretano cepillado y forro de microfibra",
+    "dimensiones": "36cm x 26cm x 2cm",
+    "caracteristicas_clave": [
+      "Cierre magnético invisible sin cremalleras",
+      "Bordes reforzados para absorción de impactos",
+      "Perfil ultra delgado"
+    ],
+    "destacado": false,
+    "stock": 35,
+    "variantes": [
+      {
+        "color_nombre": "Azul Cerúleo",
+        "color_hex": "#457B9D",
+        "imagenes": [
+          "https://placehold.co/600x600/457B9D/FFF/png?text=Funda+Azul+Exterior",
+          "https://placehold.co/600x600/457B9D/FFF/png?text=Funda+Azul+Interior",
+          "https://placehold.co/600x600/457B9D/FFF/png?text=Funda+Azul+Con+Laptop"
+        ]
+      },
+      {
+        "color_nombre": "Gris Plata",
+        "color_hex": "#C0C0C0",
+        "imagenes": [
+          "https://placehold.co/600x600/C0C0C0/000/png?text=Funda+Plata+Exterior",
+          "https://placehold.co/600x600/C0C0C0/000/png?text=Funda+Plata+Interior",
+          "https://placehold.co/600x600/C0C0C0/000/png?text=Funda+Plata+Con+Laptop"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Bolso Duffel Gym & Travel",
+    "precio": 95.00,
+    "categoria": "Bolsos",
+    "descripcion": "Del trabajo al gimnasio, y de ahí al avión. Este bolso duffel destaca por su compartimento lateral separado con ventilación, ideal para llevar tus zapatillas o ropa húmeda sin mezclar olores.",
+    "material": "Poliéster reciclado de grado militar",
+    "dimensiones": "50cm x 28cm x 25cm (Capacidad 35L)",
+    "caracteristicas_clave": [
+      "Compartimento ventilado para zapatos",
+      "Bolsillo lateral impermeable",
+      "Asas unificables con velcro y correa cruzada"
+    ],
+    "destacado": true,
+    "stock": 14,
+    "variantes": [
+      {
+        "color_nombre": "Naranja Teja",
+        "color_hex": "#D2691E",
+        "imagenes": [
+          "https://placehold.co/600x600/D2691E/FFF/png?text=Duffel+Naranja+Frente",
+          "https://placehold.co/600x600/D2691E/FFF/png?text=Duffel+Naranja+Zapatos",
+          "https://placehold.co/600x600/D2691E/FFF/png?text=Duffel+Naranja+Correa"
+        ]
+      },
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Duffel+Negro+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Duffel+Negro+Zapatos",
+          "https://placehold.co/600x600/111111/FFF/png?text=Duffel+Negro+Correa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Estuche Organizador Tech",
+    "precio": 30.00,
+    "categoria": "Accesorios",
+    "descripcion": "Pon fin al caos de cables enredados. Este estuche tipo folio se abre 180 grados revelando una grilla de bandas elásticas antideslizantes. Perfecto para organizar cargadores, discos duros y audífonos.",
+    "material": "Nylon 600D con acolchado de espuma",
+    "dimensiones": "24cm x 17cm x 4cm",
+    "caracteristicas_clave": [
+      "Sistema de bandas elásticas cruzadas",
+      "Bolsillos de malla con cremallera para SDs",
+      "Apertura total tipo libro"
+    ],
+    "destacado": false,
+    "stock": 42,
+    "variantes": [
+      {
+        "color_nombre": "Gris Técnico",
+        "color_hex": "#8C92AC",
+        "imagenes": [
+          "https://placehold.co/600x600/8C92AC/000/png?text=Organizador+Gris+Cerrado",
+          "https://placehold.co/600x600/8C92AC/000/png?text=Organizador+Gris+Abierto",
+          "https://placehold.co/600x600/8C92AC/000/png?text=Organizador+Gris+Lleno"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nombre": "Mochila Ultraligera Compacta",
+    "precio": 85.00,
+    "categoria": "Mochilas",
+    "descripcion": "Tan ligera que olvidarás que la llevas puesta. Pesa apenas 400 gramos pero soporta hasta 15 kilos. Lo mejor: se pliega sobre sí misma dentro de su propio bolsillo frontal, perfecta para llevarla extra en viajes.",
+    "material": "Nylon Ripstop 210D Anti-desgarros",
+    "dimensiones": "42cm x 28cm x 14cm",
+    "caracteristicas_clave": [
+      "Plegable en su propio bolsillo (tamaño puño)",
+      "Correas de malla transpirable súper ligeras",
+      "Costuras internas selladas"
+    ],
+    "destacado": false,
+    "stock": 28,
+    "variantes": [
+      {
+        "color_nombre": "Verde Neón",
+        "color_hex": "#39FF14",
+        "imagenes": [
+          "https://placehold.co/600x600/39FF14/000/png?text=UltraL+Verde+Expandida",
+          "https://placehold.co/600x600/39FF14/000/png?text=UltraL+Verde+Plegada",
+          "https://placehold.co/600x600/39FF14/000/png?text=UltraL+Verde+Modelo"
+        ]
+      },
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=UltraL+Negra+Expandida",
+          "https://placehold.co/600x600/111111/FFF/png?text=UltraL+Negra+Plegada",
+          "https://placehold.co/600x600/111111/FFF/png?text=UltraL+Negra+Modelo"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nombre": "Tote Bag Shopper XL",
+    "precio": 65.00,
+    "categoria": "Bolsos",
+    "descripcion": "Nuestra versión over-sized del clásico tote bag. Su base reforzada permite que se mantenga de pie. Las asas dobles (cortas para la mano y largas para el hombro) brindan versatilidad total para los días más pesados.",
+    "material": "Canvas crudo de 20 onzas ultra resistente",
+    "dimensiones": "55cm x 40cm x 18cm",
+    "caracteristicas_clave": [
+      "Base de doble capa rígida",
+      "Sistema de doble asa algodonada",
+      "Tres bolsillos externos de acceso rápido"
+    ],
+    "destacado": false,
+    "stock": 19,
+    "variantes": [
+      {
+        "color_nombre": "Beige Arena",
+        "color_hex": "#D2B48C",
+        "imagenes": [
+          "https://placehold.co/600x600/D2B48C/000/png?text=ToteXL+Beige+Frente",
+          "https://placehold.co/600x600/D2B48C/000/png?text=ToteXL+Beige+Lleno",
+          "https://placehold.co/600x600/D2B48C/000/png?text=ToteXL+Beige+Asas"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nombre": "Mochila Ejecutiva Cuero Premium",
+    "precio": 210.00,
+    "categoria": "Mochilas",
+    "descripcion": "El máximo nivel de sofisticación. Una mochila que se ve igual de bien con un traje sastre que con ropa casual. Hecha a mano con cuero de grano entero que desarrolla una hermosa pátina con el tiempo.",
+    "material": "Cuero Genuino Full-Grain",
+    "dimensiones": "43cm x 29cm x 13cm",
+    "caracteristicas_clave": [
+      "Construcción rígida anti-aplastamiento",
+      "Herrajes metálicos de latón envejecido",
+      "Funda acolchada en terciopelo para laptop 15\""
+    ],
+    "destacado": true,
+    "stock": 4,
+    "variantes": [
+      {
+        "color_nombre": "Marrón Coñac",
+        "color_hex": "#9A4623",
+        "imagenes": [
+          "https://placehold.co/600x600/9A4623/FFF/png?text=Ejecutiva+Cognac+Frente",
+          "https://placehold.co/600x600/9A4623/FFF/png?text=Ejecutiva+Cognac+Perfil",
+          "https://placehold.co/600x600/9A4623/FFF/png?text=Ejecutiva+Cognac+Interior"
+        ]
+      },
+      {
+        "color_nombre": "Negro Medianoche",
+        "color_hex": "#0a0a0a",
+        "imagenes": [
+          "https://placehold.co/600x600/0a0a0a/FFF/png?text=Ejecutiva+Negra+Frente",
+          "https://placehold.co/600x600/0a0a0a/FFF/png?text=Ejecutiva+Negra+Perfil",
+          "https://placehold.co/600x600/0a0a0a/FFF/png?text=Ejecutiva+Negra+Interior"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nombre": "Neceser de Viaje Impermeable",
+    "precio": 38.00,
+    "categoria": "Accesorios",
+    "descripcion": "Protege tu ropa de derrames de líquidos. Este neceser cuenta con un gancho integrado para colgarlo en la ducha del hotel, desplegando tres niveles de compartimentos de malla transparentes.",
+    "material": "Lona PVC Termosellada",
+    "dimensiones": "25cm x 20cm x 10cm (Cerrado)",
+    "caracteristicas_clave": [
+      "Gancho giratorio de aluminio para colgar",
+      "Interior 100% lavable a prueba de fugas",
+      "Espejo acrílico desmontable incluido"
+    ],
+    "destacado": false,
+    "stock": 33,
+    "variantes": [
+      {
+        "color_nombre": "Azul Profundo",
+        "color_hex": "#002366",
+        "imagenes": [
+          "https://placehold.co/600x600/002366/FFF/png?text=Neceser+Azul+Cerrado",
+          "https://placehold.co/600x600/002366/FFF/png?text=Neceser+Azul+Colgado",
+          "https://placehold.co/600x600/002366/FFF/png?text=Neceser+Azul+Abierto"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nombre": "Llavero de Cuero Trenzado",
+    "precio": 15.00,
+    "categoria": "Accesorios",
+    "descripcion": "Un detalle sutil pero elegante para tus llaves. Hecho a mano por artesanos locales, este llavero trenzado es lo suficientemente resistente para uso pesado y lo suficientemente suave para no rayar tu teléfono en el bolsillo.",
+    "material": "Cuero vacuno curtido al vegetal y herraje de acero",
+    "dimensiones": "12cm de largo total",
+    "caracteristicas_clave": [
+      "Argolla de acero inoxidable cepillado",
+      "Trenzado manual de 4 cabos",
+      "Cierre con remache reforzado"
+    ],
+    "destacado": false,
+    "stock": 100,
+    "variantes": [
+      {
+        "color_nombre": "Marrón Claro",
+        "color_hex": "#C4A484",
+        "imagenes": [
+          "https://placehold.co/600x600/C4A484/000/png?text=Llavero+Marron+Frente",
+          "https://placehold.co/600x600/C4A484/000/png?text=Llavero+Marron+Detalle",
+          "https://placehold.co/600x600/C4A484/000/png?text=Llavero+Marron+Argolla"
+        ]
+      },
+      {
+        "color_nombre": "Rojo Tinto",
+        "color_hex": "#722F37",
+        "imagenes": [
+          "https://placehold.co/600x600/722F37/FFF/png?text=Llavero+Rojo+Frente",
+          "https://placehold.co/600x600/722F37/FFF/png?text=Llavero+Rojo+Detalle",
+          "https://placehold.co/600x600/722F37/FFF/png?text=Llavero+Rojo+Argolla"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nombre": "Bolso Hobo de Piel Suave",
+    "precio": 130.00,
+    "categoria": "Bolsos",
+    "descripcion": "Suavidad que se siente al tacto. Este bolso estilo Hobo se deforma naturalmente adaptándose a la cantidad de cosas que lleves. Su diseño relajado es perfecto para salidas casuales de fin de semana.",
+    "material": "Piel de ante (Suede) ultra suave",
+    "dimensiones": "38cm x 35cm x 15cm",
+    "caracteristicas_clave": [
+      "Caída natural en forma de media luna",
+      "Asa ancha para evitar marcas en el hombro",
+      "Pochette interno removible con cremallera"
+    ],
+    "destacado": true,
+    "stock": 7,
+    "variantes": [
+      {
+        "color_nombre": "Camel",
+        "color_hex": "#C19A6B",
+        "imagenes": [
+          "https://placehold.co/600x600/C19A6B/000/png?text=Hobo+Camel+Frente",
+          "https://placehold.co/600x600/C19A6B/000/png?text=Hobo+Camel+Modelo",
+          "https://placehold.co/600x600/C19A6B/000/png?text=Hobo+Camel+Textura"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nombre": "Mochila Antirrobo Shield",
+    "precio": 90.00,
+    "categoria": "Mochilas",
+    "descripcion": "Viaja tranquilo en el transporte público. Esta mochila está diseñada sin cremalleras expuestas al exterior; el único acceso es a través del panel que pega con tu espalda. Cuenta con capas de tela resistentes a cortes de navaja.",
+    "material": "Poliéster anticorte y placas de PP",
+    "dimensiones": "44cm x 30cm x 16cm",
+    "caracteristicas_clave": [
+      "Cremalleras totalmente ocultas en la espalda",
+      "Material exterior resistente a cortes",
+      "Bolsillos secretos en las correas para tarjetas",
+      "Bandas reflectantes de seguridad nocturna"
+    ],
+    "destacado": false,
+    "stock": 21,
+    "variantes": [
+      {
+        "color_nombre": "Gris Oscuro",
+        "color_hex": "#4F4F4F",
+        "imagenes": [
+          "https://placehold.co/600x600/4F4F4F/FFF/png?text=Shield+Gris+Frente",
+          "https://placehold.co/600x600/4F4F4F/FFF/png?text=Shield+Gris+Espalda",
+          "https://placehold.co/600x600/4F4F4F/FFF/png?text=Shield+Gris+Abierta"
+        ]
+      },
+      {
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
+        "imagenes": [
+          "https://placehold.co/600x600/111111/FFF/png?text=Shield+Negra+Frente",
+          "https://placehold.co/600x600/111111/FFF/png?text=Shield+Negra+Espalda",
+          "https://placehold.co/600x600/111111/FFF/png?text=Shield+Negra+Abierta"
+        ]
+      }
+    ]
   }
 ]
