@@ -5,12 +5,22 @@ import { CartContext } from '../context/CartContext';
 export default function Carrito() {
   const { cart, eliminarDelCarrito, calcularTotal } = useContext(CartContext);
 
+  // 1. Reglas de Negocio para el Envío
+  const subtotal = calcularTotal();
+  const UMBRAL_ENVIO_GRATIS = 150;
+  const COSTO_ENVIO_FIJO = 15;
+  
+  // 2. Cálculos Condicionales
+  const costoEnvio = subtotal >= UMBRAL_ENVIO_GRATIS ? 0 : COSTO_ENVIO_FIJO;
+  const totalAPagar = subtotal + costoEnvio;
+  const porcentajeProgreso = Math.min((subtotal / UMBRAL_ENVIO_GRATIS) * 100, 100);
+
   if (cart.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-20 px-4">
         <h2 className="font-cinzel text-3xl font-bold text-aura-dark mb-4">Tu carrito está vacío</h2>
         <p className="font-quattrocento text-lg text-gray-600 mb-8">¡Es un buen momento para explorar nuestra colección!</p>
-        <Link to="/catalogo" className="bg-aura-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition-colors shadow-lg">
+        <Link to="/catalogo" className="bg-aura-red text-white px-8 py-3 rounded-full font-bold hover:bg-[#c92e3a] transition-colors shadow-lg">
           Ver Catálogo
         </Link>
       </div>
@@ -23,10 +33,10 @@ export default function Carrito() {
         <h1 className="font-cinzel text-4xl font-bold text-aura-dark mb-8">Tu Carrito de Compras</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden h-fit">
             <ul className="divide-y divide-gray-200">
               {cart.map((producto) => (
-                <li key={producto.id} className="p-6 flex flex-col sm:flex-row items-center gap-6">
+                <li key={producto.id} className="p-6 flex flex-col sm:flex-row items-center gap-6 hover:bg-gray-50 transition-colors">
                   <img 
                     src={producto.imagen} 
                     alt={producto.nombre} 
@@ -60,17 +70,39 @@ export default function Carrito() {
             <h2 className="font-cinzel text-2xl font-bold text-aura-dark mb-6 border-b pb-4">Resumen de la orden</h2>
             
             <div className="flex justify-between items-center mb-4 font-quattrocento text-lg text-gray-600">
-              <span>Subtotal productos:</span>
-              <span>S/ {calcularTotal().toFixed(2)}</span>
-            </div>
-            <div className="flex justify-between items-center mb-6 font-quattrocento text-lg text-gray-600">
-              <span>Envío:</span>
-              <span className="text-green-600 font-bold">¡Gratis!</span>
+              <span>Subtotal:</span>
+              <span>S/ {subtotal.toFixed(2)}</span>
             </div>
             
-            <div className="flex justify-between items-center border-t pt-4 mb-8">
+            <div className="flex justify-between items-center mb-2 font-quattrocento text-lg text-gray-600">
+              <span>Envío:</span>
+              {costoEnvio === 0 ? (
+                <span className="text-green-600 font-bold">¡Gratis!</span>
+              ) : (
+                <span>S/ {costoEnvio.toFixed(2)}</span>
+              )}
+            </div>
+
+            {/* Mensaje de Envío Gratis Dinámico */}
+            <div className="mb-6 bg-gray-50 p-3 rounded-lg border border-gray-200 text-sm text-center">
+                {subtotal >= UMBRAL_ENVIO_GRATIS ? (
+                    <p className="text-green-600 font-bold font-lora">¡Felicidades! Tienes envío gratis.</p>
+                ) : (
+                    <>
+                        <p className="text-gray-600 font-lora mb-2">
+                            Te faltan <span className="font-bold text-aura-dark">S/ {(UMBRAL_ENVIO_GRATIS - subtotal).toFixed(2)}</span> para envío gratis.
+                        </p>
+                        {/* Barra de progreso */}
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                            <div className="bg-aura-blue h-2 rounded-full transition-all duration-500" style={{ width: `${porcentajeProgreso}%` }}></div>
+                        </div>
+                    </>
+                )}
+            </div>
+            
+            <div className="flex justify-between items-center border-t border-gray-200 pt-4 mb-8">
               <span className="font-cinzel text-xl font-bold text-aura-dark">Total a pagar:</span>
-              <span className="font-cinzel text-2xl font-bold text-aura-red">S/ {calcularTotal().toFixed(2)}</span>
+              <span className="font-cinzel text-2xl font-bold text-aura-red">S/ {totalAPagar.toFixed(2)}</span>
             </div>
 
             <button className="w-full bg-aura-dark text-white py-3 rounded-lg font-bold hover:bg-aura-cerulean transition-colors tracking-widest uppercase">
