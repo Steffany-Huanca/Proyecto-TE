@@ -2,10 +2,12 @@ import { useParams, Link } from 'react-router-dom';
 import { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../context/CartContext';
 import productos from '../data/products.json';
+import toast from 'react-hot-toast';
 
 export default function DetalleProducto() {
   const { id } = useParams();
   const { agregarAlCarrito } = useContext(CartContext);
+  
   const [cantidadLocal, setCantidadLocal] = useState(1);
   const producto = productos.find(p => p.id === parseInt(id));
 
@@ -28,6 +30,7 @@ export default function DetalleProducto() {
     );
   }
 
+  // Conservamos tu función de colores
   const handleCambioColor = (variante) => {
     setVarianteSeleccionada(variante);
     setImagenActiva(variante.imagenes[0]); 
@@ -38,10 +41,15 @@ export default function DetalleProducto() {
       ...producto,
       imagen: imagenActiva 
     };
+    
     for (let i = 0; i < cantidadLocal; i++) {
       agregarAlCarrito(productoParaCarrito);
     }
-    alert(`¡Se agregaron ${cantidadLocal}x ${producto.nombre} (${varianteSeleccionada.color_nombre})!`);
+    
+    // Fusionamos la notificación moderna de la rama main con tu lógica de colores
+    const textoUnidades = cantidadLocal === 1 ? 'unidad' : 'unidades';
+    toast.success(`Agregaste ${cantidadLocal} ${textoUnidades} de ${producto.nombre} (${varianteSeleccionada.color_nombre}) al carrito`);
+    
     setCantidadLocal(1);
   };
 
@@ -94,7 +102,6 @@ export default function DetalleProducto() {
                 {producto.dimensiones && <li><strong className="text-gray-800">Dimensiones:</strong> {producto.dimensiones}</li>}
               </ul>
               
-              {/* Solo intenta hacer el .map si caracteristicas_clave existe */}
               {producto.caracteristicas_clave && producto.caracteristicas_clave.length > 0 && (
                 <>
                   <h4 className="font-quattrocento font-bold text-sm text-aura-dark uppercase tracking-wider mb-2">Características Clave</h4>
