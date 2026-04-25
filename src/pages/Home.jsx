@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import productos from '../data/products.json';
 
 export default function Home() {
-  const productosDestacados = productos.filter(producto => producto.destacado);
+  // Filtramos los destacados y tomamos solo los primeros 3 para no saturar el Home
+  const productosDestacados = productos.filter(producto => producto.destacado).slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -33,11 +34,11 @@ export default function Home() {
               
               <div className="h-64 overflow-hidden">
                 <img 
-                  src={producto.imagen} 
+                  src={producto.variantes[0].imagenes[0]} 
                   alt={producto.nombre} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-              </div>
+              </div>S
 
               <div className="p-6 text-center">
                 <p className="font-quattrocento text-xs text-aura-cerulean tracking-widest uppercase mb-2">

@@ -1,101 +1,136 @@
 import { useParams, Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../context/CartContext';
 import productos from '../data/products.json';
 import toast from 'react-hot-toast';
 
 export default function DetalleProducto() {
   const { id } = useParams();
-  
   const { agregarAlCarrito } = useContext(CartContext);
   
   const [cantidadLocal, setCantidadLocal] = useState(1);
-
   const producto = productos.find(p => p.id === parseInt(id));
 
-  if (!producto) {
+  const [varianteSeleccionada, setVarianteSeleccionada] = useState(null);
+  const [imagenActiva, setImagenActiva] = useState("");
+
+  useEffect(() => {
+    if (producto && producto.variantes && producto.variantes.length > 0) {
+      setVarianteSeleccionada(producto.variantes[0]);
+      setImagenActiva(producto.variantes[0].imagenes[0]);
+    }
+  }, [id, producto]);
+
+  if (!producto || !varianteSeleccionada) {
     return (
       <div className="container mx-auto px-4 py-20 text-center min-h-screen">
-        <h2 className="font-cinzel text-3xl text-aura-dark mb-4">Producto no encontrado</h2>
-        <Link to="/catalogo" className="text-aura-cerulean underline hover:text-aura-blue transition-colors">
-          Volver al catálogo
-        </Link>
+        <h2 className="font-cinzel text-3xl text-aura-dark mb-4">Cargando producto...</h2>
+        <Link to="/catalogo" className="text-aura-cerulean underline hover:text-aura-blue">Volver al catálogo</Link>
       </div>
     );
   }
 
+  // Conservamos tu función de colores
+  const handleCambioColor = (variante) => {
+    setVarianteSeleccionada(variante);
+    setImagenActiva(variante.imagenes[0]); 
+  };
+
   const handleAgregarClick = () => {
+    const productoParaCarrito = {
+      ...producto,
+      imagen: imagenActiva 
+    };
+    
     for (let i = 0; i < cantidadLocal; i++) {
-      agregarAlCarrito(producto);
+      agregarAlCarrito(productoParaCarrito);
     }
     
+    // Fusionamos la notificación moderna de la rama main con tu lógica de colores
     const textoUnidades = cantidadLocal === 1 ? 'unidad' : 'unidades';
-    
-    toast.success(`Agregaste ${cantidadLocal} ${textoUnidades} de ${producto.nombre} al carrito`);
+    toast.success(`Agregaste ${cantidadLocal} ${textoUnidades} de ${producto.nombre} (${varianteSeleccionada.color_nombre}) al carrito`);
     
     setCantidadLocal(1);
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 min-h-screen">
-      
+    <div className="container mx-auto px-4 py-12 min-h-screen bg-white">
       <div className="mb-6">
-        <Link to="/catalogo" className="text-aura-cerulean hover:text-aura-dark font-medium flex items-center gap-2 transition-colors w-fit">
+        <Link to="/catalogo" className="text-aura-cerulean hover:text-aura-dark font-medium flex items-center gap-2 w-fit">
           <span>&larr;</span> Volver al catálogo
         </Link>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-12 lg:gap-20">
+      <div className="flex flex-col md:flex-row gap-12 lg:gap-16">
+        
+        {/* --- SECCIÓN IZQUIERDA: GALERÍA --- */}
         <div className="w-full md:w-1/2">
-          <div className="bg-gray-50 aspect-square rounded-2xl flex items-center justify-center border border-gray-200 shadow-sm overflow-hidden">
-             <img 
-                src={producto.imagen} 
-                alt={producto.nombre} 
-                className="w-full h-full object-cover"
-              />
+          <div className="bg-gray-50 aspect-square rounded-2xl flex items-center justify-center border border-gray-200 shadow-sm overflow-hidden mb-4 p-4">
+             <img src={imagenActiva} alt={producto.nombre} className="w-full h-full object-contain transition-opacity duration-300" />
           </div>
           
-          <div className="flex gap-4 mt-6">
-             <div className="bg-gray-50 w-24 h-24 rounded-xl cursor-pointer border-2 border-aura-cerulean shadow-sm overflow-hidden">
-                <img src={producto.imagen} alt="miniatura 1" className="w-full h-full object-cover" />
-             </div>
-             <div className="bg-gray-100 w-24 h-24 rounded-xl cursor-not-allowed border border-gray-200 flex items-center justify-center opacity-50">
-                 <span className="text-xs text-gray-400">Vista 2</span>
-             </div>
-             <div className="bg-gray-100 w-24 h-24 rounded-xl cursor-not-allowed border border-gray-200 flex items-center justify-center opacity-50">
-                 <span className="text-xs text-gray-400">Vista 3</span>
-             </div>
+          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide justify-center md:justify-start">
+             {varianteSeleccionada.imagenes.map((imgUrl, index) => (
+               <div 
+                  key={index}
+                  onClick={() => setImagenActiva(imgUrl)}
+                  className={`bg-gray-50 w-20 h-20 sm:w-24 sm:h-24 rounded-xl cursor-pointer border-2 shadow-sm overflow-hidden flex-shrink-0 transition-all p-1 ${imagenActiva === imgUrl ? 'border-aura-cerulean scale-105' : 'border-transparent hover:border-gray-300'}`}
+               >
+                  <img src={imgUrl} alt={`Vista ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
+               </div>
+             ))}
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col justify-center">
+        {/* --- SECCIÓN DERECHA: INFO --- */}
+        <div className="w-full md:w-1/2 flex flex-col">
+          <p className="font-quattrocento text-aura-cerulean text-sm font-bold tracking-widest uppercase mb-2">{producto.categoria}</p>
+          <h1 className="font-cinzel text-4xl md:text-5xl font-bold text-aura-dark mb-4">{producto.nombre}</h1>
+          <p className="font-quattrocento text-3xl font-semibold text-aura-red mb-6">S/ {producto.precio.toFixed(2)}</p>
           
-          <p className="font-quattrocento text-aura-cerulean text-sm font-bold tracking-widest uppercase mb-3">
-            {producto.categoria}
-          </p>
-          
-          <h1 className="font-cinzel text-4xl md:text-5xl font-bold text-aura-dark mb-4 leading-tight">
-            {producto.nombre}
-          </h1>
-          
-          <p className="font-quattrocento text-3xl font-semibold text-aura-red mb-6">
-            S/ {producto.precio.toFixed(2)}
-          </p>
-          
-          <div className="text-gray-600 mb-8 leading-relaxed font-lora">
+          <div className="text-gray-600 mb-6 font-lora leading-relaxed text-lg">
             <p>{producto.descripcion}</p>
           </div>
 
+          {/* ESPECIFICACIONES (A PRUEBA DE BALAS) */}
+          {(producto.material || producto.dimensiones || producto.caracteristicas_clave) && (
+            <div className="bg-gray-50 p-5 rounded-xl border border-gray-100 mb-8">
+              <h4 className="font-cinzel font-bold text-lg text-aura-dark mb-3 border-b border-gray-200 pb-2">Especificaciones</h4>
+              
+              <ul className="font-lora text-gray-600 space-y-2 mb-4 text-sm">
+                {producto.material && <li><strong className="text-gray-800">Material:</strong> {producto.material}</li>}
+                {producto.dimensiones && <li><strong className="text-gray-800">Dimensiones:</strong> {producto.dimensiones}</li>}
+              </ul>
+              
+              {producto.caracteristicas_clave && producto.caracteristicas_clave.length > 0 && (
+                <>
+                  <h4 className="font-quattrocento font-bold text-sm text-aura-dark uppercase tracking-wider mb-2">Características Clave</h4>
+                  <ul className="font-lora text-gray-600 space-y-1 text-sm list-disc pl-5">
+                    {producto.caracteristicas_clave.map((caracteristica, i) => (
+                      <li key={i}>{caracteristica}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          )}
+
+           {/* SELECTOR DE COLORES */}
            <div className="mb-8">
-            <p className="font-quattrocento font-semibold text-aura-dark mb-3">Colores Disponibles:</p>
-            <div className="flex gap-3">
-                {producto.colores.map(color => (
-                    <div key={color} className="flex flex-col items-center gap-1 cursor-pointer group">
+            <p className="font-quattrocento font-semibold text-aura-dark mb-3">
+              Color seleccionado: <span className="font-normal text-gray-600">{varianteSeleccionada.color_nombre}</span>
+            </p>
+            <div className="flex gap-4">
+                {producto.variantes && producto.variantes.map(variante => (
+                    <div 
+                      key={variante.color_nombre} 
+                      onClick={() => handleCambioColor(variante)} 
+                      className="flex flex-col items-center gap-2 cursor-pointer group"
+                    >
                         <span 
-                            className="w-8 h-8 rounded-full border border-gray-300 shadow-sm group-hover:scale-110 transition-transform" 
-                            style={{ backgroundColor: color === 'Negro' ? '#111' : color === 'Café' ? '#654321' : color === 'Café Oscuro' ? '#3b2511' : color === 'Beige' ? '#F5F5DC' : color === 'Blanco' ? '#FFF' : color === 'Gris' ? '#808080' : color === 'Gris Jaspeado' ? '#A9A9A9' : color === 'Azul Marino' ? '#000080' : color === 'Verde Olivo' ? '#556B2F' : 'gray' }}
+                            className={`w-10 h-10 rounded-full border-2 shadow-md transition-all ${varianteSeleccionada.color_nombre === variante.color_nombre ? 'border-aura-cerulean scale-110' : 'border-gray-300 group-hover:scale-105'}`} 
+                            style={{ backgroundColor: variante.color_hex }}
                         ></span>
-                        <span className="text-[10px] text-gray-500 font-lora">{color}</span>
                     </div>
                 ))}
             </div>
@@ -103,48 +138,17 @@ export default function DetalleProducto() {
 
           <hr className="border-gray-200 mb-8" />
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            
-            <div className="flex items-center justify-between border border-gray-300 rounded-lg px-4 py-3 sm:w-1/3 bg-white shadow-sm">
-              <button 
-                onClick={() => setCantidadLocal(Math.max(1, cantidadLocal - 1))}
-                className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors"
-              >
-                -  {/* ¡AQUÍ ESTABA EL DETALLE, FALTABA EL SIGNO MENOS! */}
-              </button>
-              <span className="font-quattrocento font-bold text-lg text-aura-dark">
-                {cantidadLocal}
-              </span>
-              <button 
-                onClick={() => setCantidadLocal(cantidadLocal + 1)}
-                className="text-gray-400 hover:text-aura-dark font-bold text-xl transition-colors"
-              >
-                +
-              </button>
+          {/* CONTROLES Y AGREGAR */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-auto">
+            <div className="flex items-center justify-between border border-gray-300 rounded-lg px-4 py-3 sm:w-1/3 shadow-sm bg-white">
+              <button onClick={() => setCantidadLocal(Math.max(1, cantidadLocal - 1))} className="text-gray-400 hover:text-aura-dark font-bold text-xl">-</button>
+              <span className="font-quattrocento font-bold text-lg text-aura-dark">{cantidadLocal}</span>
+              <button onClick={() => setCantidadLocal(cantidadLocal + 1)} className="text-gray-400 hover:text-aura-dark font-bold text-xl">+</button>
             </div>
-
-            <button 
-              onClick={handleAgregarClick}
-              className="sm:w-2/3 bg-aura-red hover:bg-[#c92e3a] text-white font-quattrocento font-bold text-lg py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
+            <button onClick={handleAgregarClick} className="sm:w-2/3 bg-aura-red hover:bg-[#c92e3a] text-white font-quattrocento font-bold text-lg py-3 px-8 rounded-lg shadow-md transition-transform hover:-translate-y-0.5">
               Agregar al Carrito
             </button>
           </div>
-
-          <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-            <ul className="text-sm text-gray-600 space-y-2 font-medium font-lora">
-              <li className="flex items-center gap-2">
-                 <span className={producto.stock > 10 ? "text-green-600" : "text-aura-red font-bold"}>
-                    {producto.stock > 10 ? "✓" : "!"}
-                 </span> 
-                 {producto.stock > 10 ? "Stock Disponible" : `¡Solo quedan ${producto.stock} unidades!`}
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-aura-blue">✓</span> Envío gratis a partir de S/ 150
-              </li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </div>
