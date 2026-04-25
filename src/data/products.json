@@ -53,21 +53,21 @@
     "stock": 8,
     "variantes": [
       {
-        "color_nombre": "Cuero Café",
-        "color_hex": "#8B5A2B",
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/8B5A2B/FFF/png?text=Messenger+Cafe+Frente",
-          "https://placehold.co/600x600/8B5A2B/FFF/png?text=Messenger+Cafe+Abierto",
-          "https://placehold.co/600x600/8B5A2B/FFF/png?text=Messenger+Cafe+Detalle"
+          "/img/messenger-negro-1.jpg",
+          "/img/messenger-negro-2.jpg",
+          "/img/messenger-negro-3.jpg"
         ]
       },
       {
-        "color_nombre": "Negro Mate",
-        "color_hex": "#111111",
+        "color_nombre": "Café",
+        "color_hex": "#8B5A2B",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Messenger+Negro+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Messenger+Negro+Abierto",
-          "https://placehold.co/600x600/111111/FFF/png?text=Messenger+Negro+Detalle"
+          "/img/messenger-cafe-1.jpg",
+          "/img/messenger-cafe-2.jpg",
+          "/img/messenger-cafe-3.jpg"
         ]
       }
     ]
@@ -92,18 +92,18 @@
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Canguro+Negro+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Canguro+Negro+Atras",
-          "https://placehold.co/600x600/111111/FFF/png?text=Canguro+Negro+Correa"
+          "/img/canguro-negro-1.jpg",
+          "/img/canguro-negro-2.jpg",
+          "/img/canguro-negro-3.jpg"
         ]
       },
       {
         "color_nombre": "Verde Olivo",
         "color_hex": "#556B2F",
         "imagenes": [
-          "https://placehold.co/600x600/556B2F/FFF/png?text=Canguro+Verde+Frente",
-          "https://placehold.co/600x600/556B2F/FFF/png?text=Canguro+Verde+Atras",
-          "https://placehold.co/600x600/556B2F/FFF/png?text=Canguro+Verde+Correa"
+          "/img/canguro-verde-1.jpg",
+          "/img/canguro-verde-2.jpg",
+          "/img/canguro-verde-3.jpg"
         ]
       }
     ]
@@ -125,21 +125,21 @@
     "stock": 30,
     "variantes": [
       {
-        "color_nombre": "Café Oscuro",
-        "color_hex": "#3b2511",
+        "color_nombre": "Rojo",
+        "color_hex": "#b30c09",
         "imagenes": [
-          "https://placehold.co/600x600/3b2511/FFF/png?text=Billetera+Cafe+Frente",
-          "https://placehold.co/600x600/3b2511/FFF/png?text=Billetera+Cafe+Abierta",
-          "https://placehold.co/600x600/3b2511/FFF/png?text=Billetera+Cafe+Tarjetas"
+          "/img/slim-rojo-1.jpg",
+          "/img/slim-rojo-2.jpg",
+          "/img/slim-rojo-3.jpg"
         ]
       },
       {
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Billetera+Negra+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Billetera+Negra+Abierta",
-          "https://placehold.co/600x600/111111/FFF/png?text=Billetera+Negra+Tarjetas"
+          "/img/slim-negro-1.jpg",
+          "/img/slim-negro-2.jpg",
+          "/img/slim-negro-3.jpg"
         ]
       }
     ]
@@ -161,21 +161,21 @@
     "stock": 45,
     "variantes": [
       {
-        "color_nombre": "Crudo / Beige",
+        "color_nombre": "Beige",
         "color_hex": "#E8DCC4",
         "imagenes": [
-          "https://placehold.co/600x600/E8DCC4/000/png?text=Tote+Beige+Frente",
-          "https://placehold.co/600x600/E8DCC4/000/png?text=Tote+Beige+Modelo",
-          "https://placehold.co/600x600/E8DCC4/000/png?text=Tote+Beige+Interior"
+          "/img/tote-beige-1.jpg",
+          "/img/tote-beige-2.jpg",
+          "/img/tote-beige-3.jpg"
         ]
       },
       {
-        "color_nombre": "Verde Bosque",
-        "color_hex": "#2E4A35",
+        "color_nombre": "Negro",
+        "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/2E4A35/FFF/png?text=Tote+Verde+Frente",
-          "https://placehold.co/600x600/2E4A35/FFF/png?text=Tote+Verde+Modelo",
-          "https://placehold.co/600x600/2E4A35/FFF/png?text=Tote+Verde+Interior"
+          "/img/tote-negra-1.jpg",
+          "/img/tote-negra-2.jpg",
+          "/img/tote-negra-3.jpg"
         ]
       }
     ]
@@ -200,18 +200,18 @@
         "color_nombre": "Mostaza",
         "color_hex": "#D4AF37",
         "imagenes": [
-          "https://placehold.co/600x600/D4AF37/000/png?text=RollTop+Mostaza+Cerrada",
-          "https://placehold.co/600x600/D4AF37/000/png?text=RollTop+Mostaza+Abierta",
-          "https://placehold.co/600x600/D4AF37/000/png?text=RollTop+Mostaza+Espalda"
+          "/img/rolltop-mostaza-1.jpg",
+          "/img/rolltop-mostaza-2.jpg",
+          "/img/rolltop-mostaza-3.jpg"
         ]
       },
       {
         "color_nombre": "Negro Carbón",
         "color_hex": "#222222",
         "imagenes": [
-          "https://placehold.co/600x600/222222/FFF/png?text=RollTop+Negro+Cerrada",
-          "https://placehold.co/600x600/222222/FFF/png?text=RollTop+Negro+Abierta",
-          "https://placehold.co/600x600/222222/FFF/png?text=RollTop+Negro+Espalda"
+          "/img/rolltop-negra-1.jpg",
+          "/img/rolltop-negra-2.jpg",
+          "/img/rolltop-negra-3.jpg"
         ]
       }
     ]
@@ -236,9 +236,9 @@
         "color_nombre": "Gris Jaspeado",
         "color_hex": "#A9A9A9",
         "imagenes": [
-          "https://placehold.co/600x600/A9A9A9/000/png?text=Maletin+Gris+Frente",
-          "https://placehold.co/600x600/A9A9A9/000/png?text=Maletin+Gris+Abierto",
-          "https://placehold.co/600x600/A9A9A9/000/png?text=Maletin+Gris+Asa"
+          "/img/maletin-gris-1.jpg",
+          "/img/maletin-gris-2.jpg",
+          "/img/maletin-gris-3.jpg"
         ]
       }
     ]
@@ -263,18 +263,18 @@
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Gorra+Negra+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Gorra+Negra+Lado",
-          "https://placehold.co/600x600/111111/FFF/png?text=Gorra+Negra+Atras"
+          "/img/gorra-negra-1.jpg",
+          "/img/gorra-negra-2.jpg",
+          "/img/gorra-negra-3.jpg"
         ]
       },
       {
         "color_nombre": "Blanco Roto",
         "color_hex": "#F5F5F0",
         "imagenes": [
-          "https://placehold.co/600x600/F5F5F0/000/png?text=Gorra+Blanca+Frente",
-          "https://placehold.co/600x600/F5F5F0/000/png?text=Gorra+Blanca+Lado",
-          "https://placehold.co/600x600/F5F5F0/000/png?text=Gorra+Blanca+Atras"
+          "/img/gorra-blanca-1.jpg",
+          "/img/gorra-blanca-2.jpg",
+          "/img/gorra-blanca-3.jpg"
         ]
       }
     ]
@@ -299,18 +299,18 @@
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Sling+Negro+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Sling+Negro+Puesto",
-          "https://placehold.co/600x600/111111/FFF/png?text=Sling+Negro+Detalle+USB"
+          "/img/bolso-negro-1.jpg",
+          "/img/bolso-negro-2.jpg",
+          "/img/bolso-negro-3.jpg"
         ]
       },
       {
         "color_nombre": "Gris Urbano",
         "color_hex": "#708090",
         "imagenes": [
-          "https://placehold.co/600x600/708090/FFF/png?text=Sling+Gris+Frente",
-          "https://placehold.co/600x600/708090/FFF/png?text=Sling+Gris+Puesto",
-          "https://placehold.co/600x600/708090/FFF/png?text=Sling+Gris+Detalle+USB"
+          "/img/bolso-gris-1.jpg",
+          "/img/bolso-gris-2.jpg",
+          "/img/bolso-gris-3.jpg"
         ]
       }
     ]
@@ -336,9 +336,9 @@
         "color_nombre": "Gris Carbón",
         "color_hex": "#36454F",
         "imagenes": [
-          "https://placehold.co/600x600/36454F/FFF/png?text=FotoPro+Gris+Cerrada",
-          "https://placehold.co/600x600/36454F/FFF/png?text=FotoPro+Gris+Abierta",
-          "https://placehold.co/600x600/36454F/FFF/png?text=FotoPro+Gris+Tripode"
+          "/img/foto-gris-1.jpg",
+          "/img/foto-gris-2.jpg",
+          "/img/foto-gris-3.jpg"
         ]
       }
     ]
@@ -363,18 +363,18 @@
         "color_nombre": "Azul Cerúleo",
         "color_hex": "#457B9D",
         "imagenes": [
-          "https://placehold.co/600x600/457B9D/FFF/png?text=Funda+Azul+Exterior",
-          "https://placehold.co/600x600/457B9D/FFF/png?text=Funda+Azul+Interior",
-          "https://placehold.co/600x600/457B9D/FFF/png?text=Funda+Azul+Con+Laptop"
+          "/img/funda-azul-1.jpg",
+          "/img/funda-azul-2.jpg",
+          "/img/funda-azul-3.jpg"
         ]
       },
       {
         "color_nombre": "Gris Plata",
         "color_hex": "#C0C0C0",
         "imagenes": [
-          "https://placehold.co/600x600/C0C0C0/000/png?text=Funda+Plata+Exterior",
-          "https://placehold.co/600x600/C0C0C0/000/png?text=Funda+Plata+Interior",
-          "https://placehold.co/600x600/C0C0C0/000/png?text=Funda+Plata+Con+Laptop"
+          "/img/funda-gris-1.jpg",
+          "/img/funda-gris-2.jpg",
+          "/img/funda-gris-3.jpg"
         ]
       }
     ]
@@ -399,18 +399,18 @@
         "color_nombre": "Naranja Teja",
         "color_hex": "#D2691E",
         "imagenes": [
-          "https://placehold.co/600x600/D2691E/FFF/png?text=Duffel+Naranja+Frente",
-          "https://placehold.co/600x600/D2691E/FFF/png?text=Duffel+Naranja+Zapatos",
-          "https://placehold.co/600x600/D2691E/FFF/png?text=Duffel+Naranja+Correa"
+          "/img/duffel-naranja-1.jpg",
+          "/img/duffel-naranja-2.jpg",
+          "/img/duffel-naranja-3.jpg"
         ]
       },
       {
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Duffel+Negro+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Duffel+Negro+Zapatos",
-          "https://placehold.co/600x600/111111/FFF/png?text=Duffel+Negro+Correa"
+          "/img/duffel-negro-1.jpg",
+          "/img/duffel-negro-2.jpg",
+          "/img/duffel-negro-3.jpg"
         ]
       }
     ]
@@ -435,9 +435,9 @@
         "color_nombre": "Gris Técnico",
         "color_hex": "#8C92AC",
         "imagenes": [
-          "https://placehold.co/600x600/8C92AC/000/png?text=Organizador+Gris+Cerrado",
-          "https://placehold.co/600x600/8C92AC/000/png?text=Organizador+Gris+Abierto",
-          "https://placehold.co/600x600/8C92AC/000/png?text=Organizador+Gris+Lleno"
+          "/img/estuche-gris-1.jpg",
+          "/img/estuche-gris-2.jpg",
+          "/img/estuche-gris-3.jpg"
         ]
       }
     ]
@@ -459,21 +459,21 @@
     "stock": 28,
     "variantes": [
       {
-        "color_nombre": "Verde Neón",
-        "color_hex": "#39FF14",
+        "color_nombre": "Verde",
+        "color_hex": "#4a827f",
         "imagenes": [
-          "https://placehold.co/600x600/39FF14/000/png?text=UltraL+Verde+Expandida",
-          "https://placehold.co/600x600/39FF14/000/png?text=UltraL+Verde+Plegada",
-          "https://placehold.co/600x600/39FF14/000/png?text=UltraL+Verde+Modelo"
+          "/img/ultraligera-verde-1.jpg",
+          "/img/ultraligera-verde-2.jpg",
+          "/img/ultraligera-verde-3.jpg"
         ]
       },
       {
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=UltraL+Negra+Expandida",
-          "https://placehold.co/600x600/111111/FFF/png?text=UltraL+Negra+Plegada",
-          "https://placehold.co/600x600/111111/FFF/png?text=UltraL+Negra+Modelo"
+          "/img/ultraligera-negra-1.jpg",
+          "/img/ultraligera-negra-2.jpg",
+          "/img/ultraligera-negra-3.jpg"
         ]
       }
     ]
@@ -498,9 +498,9 @@
         "color_nombre": "Beige Arena",
         "color_hex": "#D2B48C",
         "imagenes": [
-          "https://placehold.co/600x600/D2B48C/000/png?text=ToteXL+Beige+Frente",
-          "https://placehold.co/600x600/D2B48C/000/png?text=ToteXL+Beige+Lleno",
-          "https://placehold.co/600x600/D2B48C/000/png?text=ToteXL+Beige+Asas"
+          "/img/totexl-beige-1.jpg",
+          "/img/totexl-beige-2.jpg",
+          "/img/totexl-beige-3.jpg"
         ]
       }
     ]
@@ -525,18 +525,18 @@
         "color_nombre": "Marrón Coñac",
         "color_hex": "#9A4623",
         "imagenes": [
-          "https://placehold.co/600x600/9A4623/FFF/png?text=Ejecutiva+Cognac+Frente",
-          "https://placehold.co/600x600/9A4623/FFF/png?text=Ejecutiva+Cognac+Perfil",
-          "https://placehold.co/600x600/9A4623/FFF/png?text=Ejecutiva+Cognac+Interior"
+          "/img/ejecutiva-marron-1.jpg",
+          "/img/ejecutiva-marron-2.jpg",
+          "/img/ejecutiva-marron-3.jpg"
         ]
       },
       {
         "color_nombre": "Negro Medianoche",
         "color_hex": "#0a0a0a",
         "imagenes": [
-          "https://placehold.co/600x600/0a0a0a/FFF/png?text=Ejecutiva+Negra+Frente",
-          "https://placehold.co/600x600/0a0a0a/FFF/png?text=Ejecutiva+Negra+Perfil",
-          "https://placehold.co/600x600/0a0a0a/FFF/png?text=Ejecutiva+Negra+Interior"
+          "/img/ejecutiva-negra-1.jpg",
+          "/img/ejecutiva-negra-2.jpg",
+          "/img/ejecutiva-negra-3.jpg"
         ]
       }
     ]
@@ -561,9 +561,9 @@
         "color_nombre": "Azul Profundo",
         "color_hex": "#002366",
         "imagenes": [
-          "https://placehold.co/600x600/002366/FFF/png?text=Neceser+Azul+Cerrado",
-          "https://placehold.co/600x600/002366/FFF/png?text=Neceser+Azul+Colgado",
-          "https://placehold.co/600x600/002366/FFF/png?text=Neceser+Azul+Abierto"
+          "/img/neceser-azul-1.jpg",
+          "/img/neceser-azul-2.jpg",
+          "/img/neceser-azul-3.jpg"
         ]
       }
     ]
@@ -588,18 +588,18 @@
         "color_nombre": "Marrón Claro",
         "color_hex": "#C4A484",
         "imagenes": [
-          "https://placehold.co/600x600/C4A484/000/png?text=Llavero+Marron+Frente",
-          "https://placehold.co/600x600/C4A484/000/png?text=Llavero+Marron+Detalle",
-          "https://placehold.co/600x600/C4A484/000/png?text=Llavero+Marron+Argolla"
+          "/img/llavero-marron-1.jpg",
+          "/img/llavero-marron-2.jpg",
+          "/img/llavero-marron-3.jpg"
         ]
       },
       {
-        "color_nombre": "Rojo Tinto",
-        "color_hex": "#722F37",
+        "color_nombre": "Rojo",
+        "color_hex": "#b30c09",
         "imagenes": [
-          "https://placehold.co/600x600/722F37/FFF/png?text=Llavero+Rojo+Frente",
-          "https://placehold.co/600x600/722F37/FFF/png?text=Llavero+Rojo+Detalle",
-          "https://placehold.co/600x600/722F37/FFF/png?text=Llavero+Rojo+Argolla"
+          "/img/llavero-rojo-1.jpg",
+          "/img/llavero-rojo-2.jpg",
+          "/img/llavero-rojo-3.jpg"
         ]
       }
     ]
@@ -624,9 +624,9 @@
         "color_nombre": "Camel",
         "color_hex": "#C19A6B",
         "imagenes": [
-          "https://placehold.co/600x600/C19A6B/000/png?text=Hobo+Camel+Frente",
-          "https://placehold.co/600x600/C19A6B/000/png?text=Hobo+Camel+Modelo",
-          "https://placehold.co/600x600/C19A6B/000/png?text=Hobo+Camel+Textura"
+          "/img/hobo-camel-1.jpg",
+          "/img/hobo-camel-2.jpg",
+          "/img/hobo-camel-3.jpg"
         ]
       }
     ]
@@ -652,18 +652,18 @@
         "color_nombre": "Gris Oscuro",
         "color_hex": "#4F4F4F",
         "imagenes": [
-          "https://placehold.co/600x600/4F4F4F/FFF/png?text=Shield+Gris+Frente",
-          "https://placehold.co/600x600/4F4F4F/FFF/png?text=Shield+Gris+Espalda",
-          "https://placehold.co/600x600/4F4F4F/FFF/png?text=Shield+Gris+Abierta"
+          "/img/antirrobo-gris-1.jpg",
+          "/img/antirrobo-gris-2.jpg",
+          "/img/antirrobo-gris-3.jpg"
         ]
       },
       {
         "color_nombre": "Negro",
         "color_hex": "#111111",
         "imagenes": [
-          "https://placehold.co/600x600/111111/FFF/png?text=Shield+Negra+Frente",
-          "https://placehold.co/600x600/111111/FFF/png?text=Shield+Negra+Espalda",
-          "https://placehold.co/600x600/111111/FFF/png?text=Shield+Negra+Abierta"
+          "/img/antirrobo-negra-1.jpg",
+          "/img/antirrobo-negra-2.jpg",
+          "/img/antirrobo-negra-3.jpg"
         ]
       }
     ]
